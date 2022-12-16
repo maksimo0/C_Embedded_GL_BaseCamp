@@ -1,6 +1,6 @@
-#include "stdio.h"
+#include <stdio.h>
 
-int main() {
+int main(void) {
     printf("Group number: 1\n");
     printf("Full name: Maksym Salim Salamovych\n");
     printf("Email: mkdjsl@gmail.com\n");
