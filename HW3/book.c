@@ -30,7 +30,7 @@ void book_print(struct book *this)
 
 void book_print_all(struct book *this) 
 {
-
-    for (; this != NULL; this = this->next)
+    for (; this != NULL; this = this->next) {
         book_print(this);
+    }
 }
