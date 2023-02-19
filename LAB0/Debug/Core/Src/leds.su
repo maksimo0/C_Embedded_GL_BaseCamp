@@ -1,0 +1,2 @@
+../Core/Src/leds.c:10:6:led_init	24	static
+../Core/Src/leds.c:18:6:led_write	16	static
