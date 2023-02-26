@@ -353,12 +353,12 @@ Disassembly of section .text:
  80004ca:	bf00      	nop
 
 080004cc <swt1>:
-
 extern volatile uint8_t speed_flag;
 extern volatile uint8_t scheme_flag;
 extern volatile uint8_t start_stop_flag;
 
-void swt1() {
+void swt1()
+{
  80004cc:	b480      	push	{r7}
  80004ce:	af00      	add	r7, sp, #0
 	if (speed_flag > 0) {
@@ -397,7 +397,8 @@ void swt1() {
 
 08000508 <swt2>:
 
-void swt2() {
+void swt2()
+{
  8000508:	b480      	push	{r7}
  800050a:	af00      	add	r7, sp, #0
 	start_stop_flag = (start_stop_flag == 0) ? 1 : 0;
@@ -421,7 +422,8 @@ void swt2() {
 
 08000530 <swt3>:
 
-void swt3() {
+void swt3()
+{
  8000530:	b480      	push	{r7}
  8000532:	af00      	add	r7, sp, #0
 	if (speed_flag < 4) {
@@ -460,7 +462,8 @@ void swt3() {
 
 0800056c <swt4>:
 
-void swt4() {
+void swt4()
+{
  800056c:	b580      	push	{r7, lr}
  800056e:	af00      	add	r7, sp, #0
 	led_stop();
@@ -498,7 +501,8 @@ void swt4() {
 
 080005a4 <swt5>:
 
-void swt5() {
+void swt5()
+{
  80005a4:	b580      	push	{r7, lr}
  80005a6:	af00      	add	r7, sp, #0
 	led_stop();
@@ -1708,7 +1712,7 @@ void EXTI9_5_IRQHandler(void)
  8000cfc:	b580      	push	{r7, lr}
  8000cfe:	af00      	add	r7, sp, #0
   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
-	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_6) == GPIO_PIN_RESET){
+	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_6) == GPIO_PIN_RESET) {
  8000d00:	2140      	movs	r1, #64	; 0x40
  8000d02:	4814      	ldr	r0, [pc, #80]	; (8000d54 <EXTI9_5_IRQHandler+0x58>)
  8000d04:	f000 fba8 	bl	8001458 <HAL_GPIO_ReadPin>
@@ -1719,7 +1723,7 @@ void EXTI9_5_IRQHandler(void)
  8000d0e:	f7ff fc2d 	bl	800056c <swt4>
 	}
 
-	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) == GPIO_PIN_RESET){
+	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_8) == GPIO_PIN_RESET) {
  8000d12:	f44f 7180 	mov.w	r1, #256	; 0x100
  8000d16:	480f      	ldr	r0, [pc, #60]	; (8000d54 <EXTI9_5_IRQHandler+0x58>)
  8000d18:	f000 fb9e 	bl	8001458 <HAL_GPIO_ReadPin>
@@ -1730,7 +1734,7 @@ void EXTI9_5_IRQHandler(void)
  8000d22:	f7ff fc3f 	bl	80005a4 <swt5>
 	}
 
-	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_9) == GPIO_PIN_RESET){
+	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_9) == GPIO_PIN_RESET) {
  8000d26:	f44f 7100 	mov.w	r1, #512	; 0x200
  8000d2a:	480a      	ldr	r0, [pc, #40]	; (8000d54 <EXTI9_5_IRQHandler+0x58>)
  8000d2c:	f000 fb94 	bl	8001458 <HAL_GPIO_ReadPin>
@@ -1768,7 +1772,7 @@ void EXTI15_10_IRQHandler(void)
  8000d58:	b580      	push	{r7, lr}
  8000d5a:	af00      	add	r7, sp, #0
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
-	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_11) == GPIO_PIN_RESET){
+	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_11) == GPIO_PIN_RESET) {
  8000d5c:	f44f 6100 	mov.w	r1, #2048	; 0x800
  8000d60:	480d      	ldr	r0, [pc, #52]	; (8000d98 <EXTI15_10_IRQHandler+0x40>)
  8000d62:	f000 fb79 	bl	8001458 <HAL_GPIO_ReadPin>
@@ -1778,7 +1782,8 @@ void EXTI15_10_IRQHandler(void)
 		swt1();
  8000d6c:	f7ff fbae 	bl	80004cc <swt1>
 	}
-	if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_RESET){
+
+	if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_RESET) {
  8000d70:	f44f 4100 	mov.w	r1, #32768	; 0x8000
  8000d74:	4809      	ldr	r0, [pc, #36]	; (8000d9c <EXTI15_10_IRQHandler+0x44>)
  8000d76:	f000 fb6f 	bl	8001458 <HAL_GPIO_ReadPin>

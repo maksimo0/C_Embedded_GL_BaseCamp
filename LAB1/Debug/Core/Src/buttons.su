@@ -1,5 +1,5 @@
 ../Core/Src/buttons.c:15:6:swt1	4	static
-../Core/Src/buttons.c:24:6:swt2	4	static
-../Core/Src/buttons.c:28:6:swt3	4	static
-../Core/Src/buttons.c:37:6:swt4	8	static
-../Core/Src/buttons.c:47:6:swt5	8	static
+../Core/Src/buttons.c:25:6:swt2	4	static
+../Core/Src/buttons.c:30:6:swt3	4	static
+../Core/Src/buttons.c:40:6:swt4	8	static
+../Core/Src/buttons.c:51:6:swt5	8	static
