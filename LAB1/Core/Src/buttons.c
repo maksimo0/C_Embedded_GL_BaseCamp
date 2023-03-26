@@ -14,11 +14,9 @@ extern volatile uint8_t start_stop_flag;
 
 void swt1()
 {
-	if (speed_flag > 0) {
-		speed_flag--;
-		if (speed_flag == 0) {
-			speed_flag = 3;
-		}
+	if (speed_flag < 3) {
+		led_stop();
+		speed_flag++;
 	}
 }
 
@@ -29,11 +27,9 @@ void swt2()
 
 void swt3()
 {
-	if (speed_flag < 4) {
-		speed_flag++;
-		if (speed_flag == 4) {
-			speed_flag = 1;
-		}
+	if (speed_flag > 1) {
+		led_stop();
+		speed_flag--;
 	}
 }
 

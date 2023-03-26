@@ -9,6 +9,7 @@
 #define INC_BUTTONS_H_
 
 #include "stm32f4xx_hal.h"
+#include "pwm_gen.h"
 
 void swt1();
 void swt2();

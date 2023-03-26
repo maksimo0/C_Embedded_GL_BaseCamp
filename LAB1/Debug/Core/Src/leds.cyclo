@@ -1,0 +1,3 @@
+leds.c:12:6:led_init	1
+leds.c:20:6:led_write	1
+leds.c:25:6:led_stop	2

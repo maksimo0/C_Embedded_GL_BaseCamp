@@ -1,0 +1,6 @@
+buttons.c:14:6:swt1	2
+buttons.c:21:6:swt2	3
+buttons.c:31:6:swt3	2
+buttons.c:38:6:swt4	2
+buttons.c:45:6:swt5	2
+buttons.c:52:6:HAL_GPIO_EXTI_Callback	1
